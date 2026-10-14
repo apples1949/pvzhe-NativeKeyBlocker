@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "id": "nativekeyblocker",
+  "name": "屏蔽原生热键",
+  "version": "1.0.0",
+  "author": "apples1949",
+  "description": "把游戏自带的 6 个战斗快捷键（1=铲子、2=切卡栏前置、3=植物血量、4=僵尸血量、5=加速、0=手套）各自做成独立开关，默认全屏蔽。屏蔽后这些按键不再触发游戏原生功能（比如按 1 不再举铲子），给其它改键 Mod 腾出按键；关闭某个开关即可恢复对应原生热键。",
+  "playInstructions": "装上即默认屏蔽全部 6 个原生热键。\n1. 想恢复某个原生热键：选项 → Mod 管理 → 屏蔽原生热键 → 配置 → 关掉对应开关（立即生效）。\n2. 与「卡槽与铲子快捷键」Mod 搭配使用可彻底避免按 1 时同时举铲子的冲突。\n3. 卸载本 Mod 时会自动还原全部原生热键。",
+  "dependencies": [],
+  "conflicts": [],
+  "provides": {},
+  "overrides": {},
+  "scripts": [],
+  "runtimeAssembly": "Runtime/ModAssembly.dll",
+  "runtimeEntryType": "NativeKeyBlockerEntry",
+  "runtimeApiVersion": 3,
+  "runtimeAssemblyPolicy": "optional",
+  "blueprints": [],
+  "translations": [],
+  "resources": [
+    "Resources/SponsorQR.png",
+    "Runtime/ModAssembly.dll"
+  ],
+  "settings": [
+    {
+      "key": "enabled",
+      "type": "bool",
+      "label": "启用总开关",
+      "group": "功能",
+      "default": true,
+      "description": "关闭后全部原生热键恢复原样（下面各分项开关也不生效）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockShovel",
+      "type": "bool",
+      "label": "屏蔽铲子键（1）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 1 不再举铲子（游戏原生 Shovel 热键）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockPacketUIFront",
+      "type": "bool",
+      "label": "屏蔽切卡栏前置键（2）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 2 不再切换卡栏前置/收回（游戏原生 PacketUIFront 热键）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockShowPlantHealth",
+      "type": "bool",
+      "label": "屏蔽植物血量键（3）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 3 不再切换植物血量显示（游戏原生 ShowPlantHealth 热键）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockShowZombieHealth",
+      "type": "bool",
+      "label": "屏蔽僵尸血量键（4）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 4 不再切换僵尸血量显示（游戏原生 ShowZombieHealth 热键）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockSpeedUp",
+      "type": "bool",
+      "label": "屏蔽加速键（5）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 5 不再切换加速（游戏原生 SpeedUp 热键，右上角「加速」按钮不受影响）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "blockGlove",
+      "type": "bool",
+      "label": "屏蔽手套键（0）",
+      "group": "屏蔽项",
+      "default": true,
+      "description": "屏蔽后按 0 不再触发手套（游戏原生 Glove 热键）。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "enableLog",
+      "type": "bool",
+      "label": "输出诊断日志",
+      "group": "诊断",
+      "default": false,
+      "description": "排查问题时打开，会把运行状态写进 godot.log。",
+      "applyMode": "immediate",
+      "affectsGameplay": false
+    },
+    {
+      "key": "aboutChangelog",
+      "type": "text",
+      "label": "更新内容",
+      "group": "关于",
+      "content": "v1.0.0 · 2026-10-11\n首版：游戏自带 6 个战斗热键（1 铲子 / 2 切卡栏前置 / 3 植物血量 / 4 僵尸血量 / 5 加速 / 0 手套）各自独立开关屏蔽，默认全屏蔽；卸载自动还原。"
+    },
+    {
+      "key": "aboutAuthor",
+      "type": "richtext",
+      "label": "作者与链接",
+      "group": "关于",
+      "content": "屏蔽原生热键 v1.0.0 · 作者：apples1949\n\n[url=https://space.bilibili.com/186773722]B 站空间[/url]\n[url=https://apples1949.lanzouc.com/b007uuknqd]蓝奏云下载（密码 762b）[/url]\n\n本模组为玩家自制 Mod，与《植物大战僵尸杂交重制版》官方无隶属关系。\n赞助：微信扫码支持作者（见下方收款码图片）。"
+    }
+  ]
+}
